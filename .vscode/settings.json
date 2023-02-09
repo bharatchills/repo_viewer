@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "lib/auth/domain/auth_failure.freezed.dart": false,
+        "**/auth_failure.freezed.dart": false
+    },
+    "explorerExclude.backup": {}
+}
