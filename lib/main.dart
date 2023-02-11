@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'core/presentation/app_widget.dart';
 
 void main() {
-  runApp(const AppWidget());
-}
-
-class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router();
-  }
+  runApp(ProviderScope(child: AppWidget()));
 }
