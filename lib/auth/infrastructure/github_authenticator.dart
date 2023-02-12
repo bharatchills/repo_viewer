@@ -119,13 +119,15 @@ class GithubAuthenticator {
 
     try {
       try {
-        dio.deleteUri(
-          revocationEndPoint,
-          data: {'access_token': accessToken},
-          options: Options(
-            headers: {'Authorization': 'basic $usernameAndPassword'},
-          ),
-        );
+        //TODO: implement delete URI
+
+        // dio.deleteUri(
+        //   revocationEndPoint,
+        //   data: {'access_token': accessToken},
+        //   options: Options(
+        //     headers: {'Authorization': 'basic $usernameAndPassword'},
+        //   ),
+        // );
       } on DioError catch (e) {
         if (e.isNullConnectionError) {
           // print(e);

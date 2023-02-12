@@ -30,7 +30,7 @@ class SignInPage extends ConsumerWidget {
                     height: 16,
                   ),
                   Text(
-                    'Welcome to\n Repo Viewer',
+                    'Welcome to Repo Viewer',
                     style: Theme.of(context).textTheme.headlineSmall,
                     textAlign: TextAlign.center,
                   ),
