@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
+import 'package:diox/diox.dart';
 import 'package:flutter/services.dart';
 import 'package:oauth2/oauth2.dart';
 import 'package:repo_viewer/auth/domain/auth_failure.dart';
