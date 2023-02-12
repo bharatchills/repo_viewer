@@ -13,4 +13,4 @@ import 'package:repo_viewer/starred_repo/presentation/starred_repos_page.dart';
   ],
   replaceInRouteName: 'Page,Route',
 )
-class $AppRoute {}
+class $AppRouter {}

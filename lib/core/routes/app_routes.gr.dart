@@ -19,8 +19,8 @@ import '../../auth/presentation/sign_in_page.dart' as _i2;
 import '../../splash/splash_page.dart' as _i1;
 import '../../starred_repo/presentation/starred_repos_page.dart' as _i4;
 
-class AppRoute extends _i5.RootStackRouter {
-  AppRoute([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
+class AppRouter extends _i5.RootStackRouter {
+  AppRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
