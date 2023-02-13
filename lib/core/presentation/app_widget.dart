@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:repo_viewer/auth/shared/providers.dart';
 import 'package:repo_viewer/core/routes/app_routes.gr.dart';
+import 'package:repo_viewer/core/shared/providers.dart';
 import '/auth/application/auth_notifier.dart';
 
 final initializationProvider = FutureProvider<void>((ref) async {
+  await ref.read(sembastProvider).init();
+
   final authNotifier = ref.read(authNotifierProvider.notifier);
   await authNotifier.checkAndUpdateAuthStatus();
 });
