@@ -34,7 +34,7 @@ class GithubHeaders with _$GithubHeaders {
 class PaginationLink with _$PaginationLink {
   const PaginationLink._();
   const factory PaginationLink({
-    required int maxPage,
+    required int? maxPage,
   }) = _PaginationLink;
 
   factory PaginationLink.parse(

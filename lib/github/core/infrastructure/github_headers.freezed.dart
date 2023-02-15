@@ -191,7 +191,7 @@ PaginationLink _$PaginationLinkFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PaginationLink {
-  int get maxPage => throw _privateConstructorUsedError;
+  int? get maxPage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -205,7 +205,7 @@ abstract class $PaginationLinkCopyWith<$Res> {
           PaginationLink value, $Res Function(PaginationLink) then) =
       _$PaginationLinkCopyWithImpl<$Res, PaginationLink>;
   @useResult
-  $Res call({int maxPage});
+  $Res call({int? maxPage});
 }
 
 /// @nodoc
@@ -221,13 +221,13 @@ class _$PaginationLinkCopyWithImpl<$Res, $Val extends PaginationLink>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxPage = null,
+    Object? maxPage = freezed,
   }) {
     return _then(_value.copyWith(
-      maxPage: null == maxPage
+      maxPage: freezed == maxPage
           ? _value.maxPage
           : maxPage // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -240,7 +240,7 @@ abstract class _$$_PaginationLinkCopyWith<$Res>
       __$$_PaginationLinkCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int maxPage});
+  $Res call({int? maxPage});
 }
 
 /// @nodoc
@@ -254,13 +254,13 @@ class __$$_PaginationLinkCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxPage = null,
+    Object? maxPage = freezed,
   }) {
     return _then(_$_PaginationLink(
-      maxPage: null == maxPage
+      maxPage: freezed == maxPage
           ? _value.maxPage
           : maxPage // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -274,7 +274,7 @@ class _$_PaginationLink extends _PaginationLink {
       _$$_PaginationLinkFromJson(json);
 
   @override
-  final int maxPage;
+  final int? maxPage;
 
   @override
   String toString() {
@@ -308,7 +308,7 @@ class _$_PaginationLink extends _PaginationLink {
 }
 
 abstract class _PaginationLink extends PaginationLink {
-  const factory _PaginationLink({required final int maxPage}) =
+  const factory _PaginationLink({required final int? maxPage}) =
       _$_PaginationLink;
   const _PaginationLink._() : super._();
 
@@ -316,7 +316,7 @@ abstract class _PaginationLink extends PaginationLink {
       _$_PaginationLink.fromJson;
 
   @override
-  int get maxPage;
+  int? get maxPage;
   @override
   @JsonKey(ignore: true)
   _$$_PaginationLinkCopyWith<_$_PaginationLink> get copyWith =>

@@ -22,7 +22,7 @@ Map<String, dynamic> _$$_GithubHeadersToJson(_$_GithubHeaders instance) =>
 
 _$_PaginationLink _$$_PaginationLinkFromJson(Map<String, dynamic> json) =>
     _$_PaginationLink(
-      maxPage: json['maxPage'] as int,
+      maxPage: json['maxPage'] as int?,
     );
 
 Map<String, dynamic> _$$_PaginationLinkToJson(_$_PaginationLink instance) =>
