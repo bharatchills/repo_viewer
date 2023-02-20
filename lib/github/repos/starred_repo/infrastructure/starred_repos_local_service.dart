@@ -1,5 +1,6 @@
 import 'package:repo_viewer/core/infrastructure/sembase_database.dart';
 import 'package:repo_viewer/github/core/infrastructure/github_repo_dto.dart';
+import 'package:repo_viewer/github/core/infrastructure/pagination_config.dart';
 import 'package:sembast/sembast.dart';
 import 'package:collection/collection.dart';
 
@@ -19,7 +20,7 @@ class StarredReposLocalService {
     await _store
         .records(
           dtos.mapIndexed(
-            (index, _) => index + 3 + sembastPage,
+            (index, _) => index + PaginationConfig.itemsPerPage + sembastPage,
           ),
         )
         .put(
@@ -31,11 +32,14 @@ class StarredReposLocalService {
   Future<List<GithubRepoDTO>> getPage(int page) async {
     final sembasePage = page - 1;
 
-    await _store.find(
+    final records = await _store.find(
       _sembastDatabase.instance,
       finder: Finder(
-        limit: 3,
+        limit: PaginationConfig.itemsPerPage,
+        offset: PaginationConfig.itemsPerPage * sembasePage,
       ),
     );
+
+    return records.map((e) => GithubRepoDTO.fromJson(e.value)).toList();
   }
 }
